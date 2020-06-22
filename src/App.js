@@ -33,8 +33,14 @@ class App extends React.Component {
   render() {
     return (
       <div className="app">
-        <Dog win={this.handleWin} />
-        <Cat win={this.handleWin} />
+        <div className="header">
+          <h1>Choose Your Fighter!</h1>
+          <h1>Round {this.state.round}</h1>
+        </div>
+        <div className="fighters">
+          <Dog ref="dog" win={this.handleWin} />
+          <Cat ref="cat" win={this.handleWin} />
+        </div>
       </div>
     );
   }
