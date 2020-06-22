@@ -2,6 +2,7 @@ import React from "react";
 import "./App.css";
 import Dog from "./components/Dog/Dog";
 import Cat from "./components/Cat/Cat";
+import Winner from "./components/Winner/Winner";
 
 class App extends React.Component {
   constructor() {
@@ -10,6 +11,7 @@ class App extends React.Component {
       round: 1,
       catScore: 0,
       dogScore: 0,
+      animateFighters: "animate-fighters",
     };
     this.dogRef = React.createRef();
     this.catRef = React.createRef();
@@ -20,11 +22,13 @@ class App extends React.Component {
       this.setState((state) => ({
         catScore: state.catScore + 1,
         round: state.round + 1,
+        animateFighters: "animate-fighters",
       }));
     } else {
       this.setState((state) => ({
         dogScore: state.dogScore + 1,
         round: this.state.round + 1,
+        animateFighters: "animate-fighters",
       }));
     }
     this.setState({
@@ -35,18 +39,29 @@ class App extends React.Component {
   };
 
   render() {
-    return (
-      <div className="app">
+    let content = (
+      <>
         <div className="header">
           <h1>Choose Your Fighter!</h1>
           <h1>Round {this.state.round}</h1>
         </div>
-        <div className="fighters">
+        <div
+          className={`fighters ${this.state.animateFighters}`}
+          onAnimationEnd={() => this.setState({ animateFighters: "" })}
+        >
           <Dog ref={this.dogRef} win={this.handleWin} />
           <Cat ref={this.catRef} win={this.handleWin} />
         </div>
-      </div>
+      </>
     );
+    if (this.state.round === 4) {
+      let winner = "dog";
+      if (this.state.catScore > this.state.dogScore) {
+        winner = "cat";
+      }
+      content = <Winner winner={winner} />;
+    }
+    return <div className="app">{content}</div>;
   }
 }
 
