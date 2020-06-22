@@ -29,11 +29,17 @@ class Dog extends React.Component {
       });
   };
 
+  handleClick = () => {
+    this.props.win("dog");
+  };
+
   render() {
     return (
       <div className="dog">
         <img alt="dog" src={this.state.img} />
-        <button className="btn btn-bright">WOOF!</button>
+        <button className="btn btn-bright" onClick={this.handleClick}>
+          WOOF!
+        </button>
       </div>
     );
   }

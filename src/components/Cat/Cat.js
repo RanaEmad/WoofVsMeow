@@ -31,12 +31,16 @@ class Cat extends React.Component {
         console.error(error);
       });
   };
-
+  handleClick = () => {
+    this.props.win("cat");
+  };
   render() {
     return (
       <div className="cat">
         <img alt="cat" src={this.state.img} />
-        <button className="btn btn-bright">MEOW!</button>
+        <button className="btn btn-bright" onClick={this.handleClick}>
+          MEOW!
+        </button>
       </div>
     );
   }
