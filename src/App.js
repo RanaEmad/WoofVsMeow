@@ -11,6 +11,8 @@ class App extends React.Component {
       catScore: 0,
       dogScore: 0,
     };
+    this.dogRef = React.createRef();
+    this.catRef = React.createRef();
   }
 
   handleWin = (type = "dog") => {
@@ -28,6 +30,8 @@ class App extends React.Component {
     this.setState({
       round: this.state.round + 1,
     });
+    this.dogRef.current.fetchImg();
+    this.catRef.current.fetchImg();
   };
 
   render() {
@@ -38,8 +42,8 @@ class App extends React.Component {
           <h1>Round {this.state.round}</h1>
         </div>
         <div className="fighters">
-          <Dog ref="dog" win={this.handleWin} />
-          <Cat ref="cat" win={this.handleWin} />
+          <Dog ref={this.dogRef} win={this.handleWin} />
+          <Cat ref={this.catRef} win={this.handleWin} />
         </div>
       </div>
     );
