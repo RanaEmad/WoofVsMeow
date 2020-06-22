@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/woof-vs-meow/static/css/main.497072e3.chunk.css",
+    "main.js": "/woof-vs-meow/static/js/main.b815a1e0.chunk.js",
+    "main.js.map": "/woof-vs-meow/static/js/main.b815a1e0.chunk.js.map",
+    "runtime-main.js": "/woof-vs-meow/static/js/runtime-main.d07845ca.js",
+    "runtime-main.js.map": "/woof-vs-meow/static/js/runtime-main.d07845ca.js.map",
+    "static/js/2.fb8bea3a.chunk.js": "/woof-vs-meow/static/js/2.fb8bea3a.chunk.js",
+    "static/js/2.fb8bea3a.chunk.js.map": "/woof-vs-meow/static/js/2.fb8bea3a.chunk.js.map",
+    "index.html": "/woof-vs-meow/index.html",
+    "precache-manifest.eed0112af6e3759ad64a1070552bc414.js": "/woof-vs-meow/precache-manifest.eed0112af6e3759ad64a1070552bc414.js",
+    "service-worker.js": "/woof-vs-meow/service-worker.js",
+    "static/css/main.497072e3.chunk.css.map": "/woof-vs-meow/static/css/main.497072e3.chunk.css.map",
+    "static/js/2.fb8bea3a.chunk.js.LICENSE.txt": "/woof-vs-meow/static/js/2.fb8bea3a.chunk.js.LICENSE.txt",
+    "static/media/cat.svg": "/woof-vs-meow/static/media/cat.b38a9e9c.svg",
+    "static/media/dog.svg": "/woof-vs-meow/static/media/dog.9944c85c.svg",
+    "static/media/App.css": "/woof-vs-meow/static/media/paws.2333bfda.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d07845ca.js",
+    "static/js/2.fb8bea3a.chunk.js",
+    "static/css/main.497072e3.chunk.css",
+    "static/js/main.b815a1e0.chunk.js"
+  ]
+}
